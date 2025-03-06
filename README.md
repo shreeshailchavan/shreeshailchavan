@@ -11,30 +11,48 @@ shreeshailchavan/shreeshailchavan is a ✨ special ✨ repository because its `R
 You can click the Preview link to take a look at your changes.
 --->
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=1000&color=00FF00&center=true&vCenter=true&width=600&lines=👋+Hi%2C+I’m+Shreeshail+Chavan;🚀+AI+Full+Stack+Engineer;💻+Building+Intelligent+Systems;✨+Redefining+Possibilities" alt="Typing SVG" />
+  <table>
+    <tr>
+      <td width="50%" align="center">
+        <!-- Anime Profile Image -->
+        <img src="https://i.imgur.com/your-anime-image.png" alt="Shreeshail Chavan" width="200" style="border-radius: 50%; border: 5px solid #00FF00;" />
+      </td>
+      <td width="50%" align="left">
+        <!-- Animated "I'm Shreeshail" Text -->
+        <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=1000&color=00FF00&vCenter=true&width=400&lines=I'm+Shreeshail+Chavan;AI+Full+Stack+Engineer;Building+Intelligent+Systems;✨+Redefining+Possibilities" alt="Typing SVG" />
+        <br><br>
+        <!-- Description About Me -->
+        <p style="font-size: 18px; line-height: 1.6; color: #333;">
+          I’m a <strong style="color: #00FF00;">AI Full Stack Engineer</strong> with a passion for building intelligent, scalable, and impactful systems. I thrive at the intersection of <strong style="color: #00FF00;">artificial intelligence</strong>, <strong style="color: #00FF00;">software engineering</strong>, and <strong style="color: #00FF00;">user-centric design</strong>. My mission? To create AI-driven solutions that don’t just solve problems but <strong style="color: #00FF00;">redefine what’s possible</strong>.  
+        </p>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
 
-## 🚀 **About Me**  
-<p style="font-size: 18px; line-height: 1.6; color: #333;">
-  I’m a <strong style="color: #00FF00;">AI Full Stack Engineer</strong> with a passion for building intelligent, scalable, and impactful systems. I thrive at the intersection of <strong style="color: #00FF00;">artificial intelligence</strong>, <strong style="color: #00FF00;">software engineering</strong>, and <strong style="color: #00FF00;">user-centric design</strong>. My mission? To create AI-driven solutions that don’t just solve problems but <strong style="color: #00FF00;">redefine what’s possible</strong>.  
-</p>
-
-<p style="font-size: 18px; line-height: 1.6; color: #333;">
-  I’m not just a coder—I’m a <strong style="color: #00FF00;">problem solver</strong>, a <strong style="color: #00FF00;">creative thinker</strong>, and a <strong style="color: #00FF00;">lifelong learner</strong>. Whether it’s designing neural networks, building robust backend systems, or crafting seamless user experiences, I bring <strong style="color: #00FF00;">precision, innovation, and a touch of magic</strong> to everything I do.  
-</p>
+## 🛠️ **Tech Stack**  
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+</div>
 
 ---
 
-## 🔥 **What I Bring to the Table**  
-<ul style="font-size: 16px; line-height: 1.6; color: #333;">
-  <li><strong style="color: #00FF00;">AI/ML Expertise</strong>: From <strong>deep learning</strong> to <strong>natural language processing</strong>, I build models that learn, adapt, and deliver results.</li>
-  <li><strong style="color: #00FF00;">Full Stack Mastery</strong>: Proficient in <strong>frontend</strong> (React, Angular) and <strong>backend</strong> (Node.js, Django, Flask) development, with a knack for creating end-to-end solutions.</li>
-  <li><strong style="color: #00FF00;">Cloud & DevOps</strong>: Skilled in deploying scalable AI solutions on <strong>AWS</strong>, <strong>Azure</strong>, and <strong>Google Cloud</strong>, with CI/CD pipelines to ensure seamless delivery.</li>
-  <li><strong style="color: #00FF00;">Data Whisperer</strong>: I turn raw data into actionable insights using <strong>Pandas</strong>, <strong>NumPy</strong>, and <strong>SQL</strong>, and visualize it beautifully with <strong>Tableau</strong> and <strong>Power BI</strong>.</li>
-  <li><strong style="color: #00FF00;">Innovation Mindset</strong>: I don’t just follow trends—I <strong>set them</strong>.</li>
-</ul>
+## 📊 **GitHub Stats**  
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=shreeshailchavan&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="GitHub Stats" width="45%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=shreeshailchavan&theme=dark&hide_border=true" alt="GitHub Streak" width="45%" />
+</div>
 
 ---
 
@@ -71,13 +89,6 @@ You can click the Preview link to take a look at your changes.
 
 ---
 
-## 😄 **Pronouns**  
-<p style="font-size: 18px; line-height: 1.6; color: #333;">
-  He/Him  
-</p>
-
----
-
 ## ⚡ **Fun Facts About Me**  
 <ul style="font-size: 16px; line-height: 1.6; color: #333;">
   <li>I once trained a neural network to generate <strong style="color: #00FF00;">Shakespearean poetry</strong>—it was surprisingly good!</li>
@@ -86,61 +97,6 @@ You can click the Preview link to take a look at your changes.
 </ul>
 
 ---
-
-## 🛠️ **Tech Stack**  
-<h3 style="color: #00FF00;">AI/ML</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #333;">
-  Python, TensorFlow, PyTorch, Keras, Scikit-learn, OpenCV, Hugging Face, LangChain  
-</p>
-
-<h3 style="color: #00FF00;">Full Stack Development</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #333;">
-  <strong>Frontend</strong>: React, Angular, HTML5, CSS3, JavaScript, TypeScript  
-  <strong>Backend</strong>: Node.js, Django, Flask, FastAPI, REST APIs, GraphQL  
-  <strong>Databases</strong>: PostgreSQL, MongoDB, Firebase  
-</p>
-
-<h3 style="color: #00FF00;">Cloud & DevOps</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #333;">
-  AWS, Azure, Google Cloud, Docker, Kubernetes, Terraform, Jenkins  
-</p>
-
-<h3 style="color: #00FF00;">Tools & Platforms</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #333;">
-  Git, Jupyter Notebook, VS Code, Tableau, Power BI, Figma  
-</p>
-
----
-
-## 🏆 **Projects That Define Me**  
-<h3 style="color: #00FF00;">1. AI-Powered Personal Assistant</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #333;">
-  Built a voice-activated assistant that integrates <strong>NLP</strong> and <strong>computer vision</strong> to manage tasks, answer queries, and even detect emotions.  
-</p>
-
-<h3 style="color: #00FF00;">2. Autonomous Drone Navigation System</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #333;">
-  Developed an AI system for drones to navigate complex environments using <strong>reinforcement learning</strong> and <strong>computer vision</strong>.  
-</p>
-
-<h3 style="color: #00FF00;">3. Predictive Healthcare Analytics</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #333;">
-  Created a machine learning model to predict patient outcomes with <strong>95% accuracy</strong>, helping doctors make data-driven decisions.  
-</p>
-
----
-
-## 🌟 **Why My Work Stands Out**  
-<p style="font-size: 18px; line-height: 1.6; color: #333;">
-  I don’t just build systems—I <strong style="color: #00FF00;">craft experiences</strong>. My work is a blend of <strong>cutting-edge technology</strong>, <strong>elegant design</strong>, and <strong>real-world impact</strong>. Every line of code I write is a step toward a smarter, more connected world.  
-</p>
-
----
-
-## 📈 **Let’s Build the Future Together**  
-<p style="font-size: 18px; line-height: 1.6; color: #333;">
-  If you’re looking for someone who can <strong style="color: #00FF00;">dream big</strong>, <strong>execute flawlessly</strong>, and <strong>deliver results</strong>, let’s connect. Whether it’s a groundbreaking project or just a chat about the future of AI, I’m always ready to collaborate.  
-</p>
 
 <h2 style="text-align: center; color: #00FF00;">Let’s create something extraordinary.</h2>
 
