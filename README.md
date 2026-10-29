@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/terminal.svg" width="100%" alt="Terminal: Shreeshail Chavan, backend and LLM systems engineer. Founding engineer at Kreated.store, joining Rakuten Tokyo in Oct 2027. Projects: RouteMem, NailStore, events worker. Impact: 80% LLM spend cut, 110+ endpoints led, 50-70% latency cut, 3,000+ users."/>
+<img src="assets/terminal.svg" width="100%" alt="Terminal: Shreeshail Chavan, backend and LLM systems engineer. Building: LLM routing and semantic caching (RouteMem), a vision sizing model (NailStore). Projects: RouteMem, NailStore, events worker. Impact: 80% LLM spend cut, 110+ endpoints led, 50-70% latency cut, 3,000+ users."/>
 
 <br/><br/>
 
@@ -39,11 +39,11 @@ Every tenant table carries an artist ID, and Postgres row-level security runs un
 
 <br/><br/>
 
-<img src="assets/experience.svg" width="100%" alt="Experience: Rakuten (incoming), Kreated.store, NixOut, iGAP Technologies, Government Polytechnic Kolhapur"/>
+<img src="assets/experience.svg" width="100%" alt="Experience: NixOut, iGAP Technologies, Government Polytechnic Kolhapur"/>
 
 <br/><br/>
 
-<img src="assets/stack.svg" width="100%" alt="Stack: Python, TypeScript, Go, FastAPI, NestJS, Next.js, PostgreSQL, Redis, AWS, Docker, Kubernetes"/>
+<img src="assets/stack.svg" width="100%" alt="Stack: Python, TypeScript, Go, FastAPI, NestJS, Next.js, Ollama, Gemini, Qdrant, Claude Code, Google Antigravity, MCP, PostgreSQL, Redis, AWS, Docker, Kubernetes, system design"/>
 
 <br/><br/>
 
@@ -51,4 +51,4 @@ Every tenant table carries an artist ID, and Postgres row-level security runs un
 
 <br/><br/>
 
-<div align="center"><sub>Open to 2027 backend and AI / LLM systems roles · <a href="mailto:shreeshailchavan309@gmail.com">shreeshailchavan309@gmail.com</a></sub></div>
+<div align="center"><sub>Open to internships and 2027 graduate roles in AI / LLM systems and backend · <a href="mailto:shreeshailchavan309@gmail.com">shreeshailchavan309@gmail.com</a></sub></div>
