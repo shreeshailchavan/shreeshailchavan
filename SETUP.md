@@ -1,13 +1,18 @@
-# Publish the profile (about 5 minutes)
+# Publish the profile (v6: Linux desktop)
 
-1. On GitHub, create a **public** repo named exactly like the username (e.g. `shreeshailchavan`). Its README becomes the profile page.
-2. Unzip `github-profile-v3.zip` and upload everything: `README.md`, `assets/`, `resume/`.
-3. Open the profile. The terminal at the top types out his story on a 22-second loop; the project diagrams have requests moving through them; status dots pulse.
+1. Create a public repo named exactly like the GitHub username (e.g. `shreeshailchavan`).
+2. Upload `README.md`, `assets/`, `resume/` and the hidden `.github/` folder from this folder.
+3. Contribution map: in the repo go to Settings → Actions → General → Workflow permissions, pick "Read and write", then Actions → "contribution map" → Run workflow once. After that it redraws `assets/contributions.svg` from his real GitHub data every day at 07:47 IST. The file shipped here is a preview drawn from his screenshot (227 contributions).
 
-## Before going live
-- Repo links assume `routemem`, `nailstore`, `nailstore-events-worker` under `shreeshailchavan`. Change them in README.md if different.
-- The Events worker panel says "in progress". Remove it if that repo has no commits yet.
-- Text lives inside the `.svg` files as plain text, so any wording can be edited in a text editor.
+Layout: a status bar (workspaces 1–5), a neofetch window as the intro, then numbered sections like tiling-WM workspaces:
+2 Stack (eight tiled windows with icons), 3 Work (git log graph: work lane + education lane),
+4 Projects (one app window per project with a live request-flow diagram), 5 Contact (keycap buttons).
 
-## Pin these repos
-routemem · nailstore · nailstore-events-worker (once real) · one more clean repo. Each needs a one-line description, topics, a diagram or screenshot, a 3-command quickstart and an honest status section.
+Palette: GitHub Halloween contribution colours (#15181d, #fac58e, #c36219, #974c17, #e2cf50).
+Type: Bricolage Grotesque (headings) + Instrument Sans (body), embedded in each SVG. No monospace, no italics.
+Motion: only a blinking status dot/cursor and one dot travelling along each diagram edge.
+
+Check before going live
+- Repo links assume `shreeshailchavan/routemem`, `/nailstore`, `/nailstore-events-worker`.
+- Remove the Events worker window if that repo has no commits yet.
+- To change wording, edit `source/gen_v6.py` and run `python3 source/gen_v6.py` (needs `pip install fonttools brotli`).
