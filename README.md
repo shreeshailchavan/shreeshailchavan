@@ -22,7 +22,7 @@
 
 <img src="assets/work.svg" width="100%" alt="NixOut, Software Engineer Intern 2026; PICT Pune B.E. 2024-2027; iGAP Technologies, Full-Stack Engineer and Team Lead; Government Polytechnic Kolhapur, Project Developer; Diploma in IT 2021-2024."/>
 
-<img src="assets/contributions.svg" width="100%" alt="GitHub contributions in the last year, refreshed daily"/>
+<!-- <img src="assets/contributions.svg" width="100%" alt="GitHub contributions in the last year, refreshed daily"/> -->
 
 <br/><br/>
 
