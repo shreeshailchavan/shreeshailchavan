@@ -26,39 +26,76 @@ assert r > x, "status bar overflow"
 save("bar.svg", svg(W, 44, b, bg=False))
 
 # ---------- 2. neofetch hero ----------
-H = 440
+# Left: "SC" logo in contribution cells, always on screen, a colour wave runs through it forever.
+# Right: a terminal. 14s loop: "neofetch" typed key by key, output printed line by line,
+# fresh prompt with blinking cursor, hold, clear. SMIL only; without SMIL the final frame shows.
+H, T = 460, 14.0
+def at(t, end=T-0.45):
+    return (f'<animate attributeName="opacity" values="0;1;0" keyTimes="0;{t/T:.4f};{end/T:.4f}" '
+            f'dur="{T}s" calcMode="discrete" repeatCount="indefinite"/>')
+def g_at(t, inner): return f'<g>{at(t)}{inner}</g>'
 b = window(0, 0, W, H, "shreeshail@arch: ~", "zsh")
-# pixel logo: "SC" in contribution cells
 G = {"S":["01111","10000","10000","01110","00001","00001","11110"], "C":["01111","10000","10000","10000","10000","10000","01111"]}
 rows = [G["S"][r] + "0" + G["C"][r] for r in range(7)]
-sz, gp = 24, 6; st = sz + gp; lx, ly = 44, 74
+sz, gp = 24, 6; st = sz + gp; lx, ly = 44, 70
 random.seed(3); pal = [PEACH]*5 + [ORANGE]*3 + [YEL]
+HI = {PEACH: YEL, ORANGE: PEACH, YEL: PEACH}
+WD = 4.2  # wave period
 for r in range(11):
     for c in range(11):
-        rr, cc = r-2, c
-        on = 0 <= rr < 7 and cc < 11 and rows[rr][cc] == "1"
+        rr = r-2; on = 0 <= rr < 7 and rows[rr][c] == "1"
         col = random.choice(pal) if on else CELL
-        b += f'<rect x="{lx+c*st}" y="{ly+r*st}" width="{sz}" height="{sz}" rx="4" fill="{col}"/>'
-logo_r = lx + 11*st
-X = logo_r + 52
-b += text(X, 86, "~  $  neofetch", 15, MUT, 500)
-b += text(X, 130, "shreeshail", 38, PEACH, 800, "Bricolage", ls=-1) 
+        hi = HI[col] if on else BD
+        off = (c + r*0.5) * 0.11
+        b += (f'<rect x="{lx+c*st}" y="{ly+r*st}" width="{sz}" height="{sz}" rx="4" fill="{col}">'
+              f'<animate attributeName="fill" values="{col};{hi};{col};{col}" keyTimes="0;.08;.2;1" '
+              f'dur="{WD}s" begin="{off-WD:.2f}s" repeatCount="indefinite"/></rect>')
+logo_bottom = ly + 11*st
+X = lx + 11*st + 52
+# terminal column
+PY = ly + 14
+def prompt(y):
+    o, x = "", X
+    for t, col, wt in [("shreeshail@arch", PEACH, 600), ("  ~  ", DIM, 500), ("$", ORANGE, 600), (" ", FG, 400)]:
+        o += text(x, y, t, 15, col, wt); x += tw(t, 15, wt=wt)
+    return o, x
+p1, cx = prompt(PY); b += p1
+cmd, t0, step = "neofetch", 0.6, 0.11
+widths = [tw(cmd[:i], 15, wt=500) for i in range(len(cmd)+1)] + [0]
+kt = [0] + [(t0 + i*step)/T for i in range(1, len(cmd)+1)] + [(T-0.45)/T]
+vals = ";".join(f"{w:.1f}" for w in widths); keys = ";".join(f"{k:.4f}" for k in kt)
+full = widths[-2]
+b += (f'<clipPath id="typ"><rect x="{cx-1}" y="{PY-17}" height="23" width="{full+2}">'
+      f'<animate attributeName="width" values="{vals}" keyTimes="{keys}" dur="{T}s" calcMode="discrete" repeatCount="indefinite"/></rect></clipPath>')
+b += f'<g clip-path="url(#typ)">{text(cx, PY, cmd, 15, FG, 500)}</g>'
+enter = t0 + len(cmd)*step + 0.25
+cur_x = ";".join(f"{cx+w+3:.1f}" for w in widths)
+b += (f'<rect x="{cx+full+3}" y="{PY-14}" width="9" height="18" fill="{PEACH}">'
+      f'<animate attributeName="x" values="{cur_x}" keyTimes="{keys}" dur="{T}s" calcMode="discrete" repeatCount="indefinite"/>'
+      f'<animate attributeName="opacity" values="1;0;1;0;1;0;1" keyTimes="0;.02;.04;{enter/T:.4f};{(T-0.45)/T:.4f};{(T-0.3)/T:.4f};{(T-0.15)/T:.4f}" '
+      f'dur="{T}s" calcMode="discrete" repeatCount="indefinite"/></rect>')
+nt = enter + 0.15; NY = PY + 46
 nw = tw("shreeshail", 38, "Bricolage", 800, -1)
-b += text(X+nw+2, 130, "@arch", 38, DIM, 800, "Bricolage", ls=-1)
-b += f'<path d="M{X} 148H{W-48}" stroke="{BD}"/>'
+b += g_at(nt, text(X, NY, "shreeshail", 38, PEACH, 800, "Bricolage", ls=-1) + text(X+nw+2, NY, "@arch", 38, DIM, 800, "Bricolage", ls=-1))
+b += g_at(nt + 0.12, f'<path d="M{X} {NY+18}H{W-48}" stroke="{BD}"/>')
 info = [("role", "Backend & LLM systems engineer"),
         ("focus", "Scalable APIs · distributed systems · LLM infrastructure"),
         ("langs", "Python · Go · TypeScript · SQL"),
         ("edu", "PICT Pune, B.E. E&TC 2027 · CGPA 8.57"),
         ("shipped", "3 startups · 110+ endpoints led · 50–70% faster APIs"),
         ("status", "Open to internships + 2027 graduate roles")]
+lt = nt + 0.25
 for i, (k, v) in enumerate(info):
-    y = 184 + i*31
-    b += text(X, y, k, 16, ORANGE, 600)
-    fits(v, 16.5, W-48-(X+92)); b += text(X+92, y, v, 16.5, FG if k != "status" else YEL, 400 if k != "status" else 500)
-for i, c in enumerate([BG, RUST, ORANGE, PEACH, YEL, BD, MUT, FG]):
-    b += f'<rect x="{X+i*30}" y="{H-52}" width="24" height="16" rx="3" fill="{c}" stroke="{BD}"/>'
-b += f'<rect class="blink" x="{X+8*30+10}" y="{H-54}" width="10" height="20" fill="{PEACH}"/>'
+    y = NY + 54 + i*31; fits(v, 16.5, W-48-(X+92))
+    b += g_at(lt + i*0.16, text(X, y, k, 16, ORANGE, 600) +
+              text(X+92, y, v, 16.5, FG if k != "status" else YEL, 400 if k != "status" else 500))
+bt = lt + len(info)*0.16 + 0.1; BY = NY + 54 + 5*31 + 26
+b += g_at(bt, "".join(f'<rect x="{X+i*30}" y="{BY}" width="24" height="16" rx="3" fill="{c}" stroke="{BD}"/>'
+                      for i, c in enumerate([BG, RUST, ORANGE, PEACH, YEL, BD, MUT, FG])))
+pt = bt + 0.3; PY2 = BY + 52
+p2, cx2 = prompt(PY2)
+b += g_at(pt, p2 + f'<rect class="blink" x="{cx2+3}" y="{PY2-14}" width="9" height="18" fill="{PEACH}"/>')
+assert PY2 < H - 22 and logo_bottom < H - 20, (PY2, logo_bottom)
 save("hero.svg", svg(W, H, b, bg=False))
 
 # ---------- 3. section headers ----------
