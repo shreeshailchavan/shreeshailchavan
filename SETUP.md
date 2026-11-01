@@ -8,7 +8,7 @@ Layout: a status bar (workspaces 1–5), a neofetch window as the intro, then nu
 2 Stack (eight tiled windows with icons), 3 Work (git log graph: work lane + education lane),
 4 Projects (one app window per project with a live request-flow diagram), 5 Contact (keycap buttons).
 
-Palette: crimson (#141013 background, #ff9aa6 rose, #e0294a crimson, #8e1530 deep crimson, #ff5468 scarlet).
+Palette: dark crimson (#141013 background, #e2717f rose, #c41e3a crimson, #6e0f22 deep crimson, #e23a50 scarlet).
 Type: Bricolage Grotesque (headings) + Instrument Sans (body), embedded in each SVG. No monospace, no italics.
 Motion: in the hero, a colour wave runs through the SC logo forever while the right side plays as a terminal (types `neofetch`, prints the info line by line, 14s loop); otherwise only a blinking status dot and one dot travelling along each diagram edge.
 

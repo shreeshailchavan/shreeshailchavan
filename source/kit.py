@@ -3,7 +3,7 @@ import base64, json, os
 from fontTools.ttLib import TTFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 BG="#141013"; SURF="#1b1518"; SURF2="#241b1f"; CELL="#261c20"; BD="#3a2a30"; FG="#f8eef0"; TXT="#e2d6d9"; MUT="#ab9ca1"; DIM="#6b5a60"
-PEACH="#ff9aa6"; ORANGE="#e0294a"; RUST="#8e1530"; YEL="#ff5468"  # crimson theme
+PEACH="#e2717f"; ORANGE="#c41e3a"; RUST="#6e0f22"; YEL="#e23a50"  # crimson theme
 FONTS = {("Bricolage",800):"bricolage-grotesque-latin-800-normal.woff2",("Bricolage",700):"bricolage-grotesque-latin-700-normal.woff2",
          ("Instrument",400):"instrument-sans-latin-400-normal.woff2",("Instrument",500):"instrument-sans-latin-500-normal.woff2",
          ("Instrument",600):"instrument-sans-latin-600-normal.woff2"}
